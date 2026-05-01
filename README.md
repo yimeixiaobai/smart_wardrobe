@@ -122,34 +122,9 @@ SmartWardrobe 没有内置后台服务，也不会内置上传你的衣橱数据
 
 ## 🏗 技术架构
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                      SwiftUI Views                      │
-│  TodayView · WardrobeView · OutfitsTab · ProfileView    │
-├─────────────────────────────────────────────────────────┤
-│                       Services                          │
-│  ┌──────────────┐  ┌──────────────┐  ┌───────────────┐  │
-│  │ LLMService   │  │ WeatherSvc   │  │ ImageStorage  │  │
-│  │ (actor)      │  │ (QWeather)   │  │ (File + Cache)│  │
-│  └──────┬───────┘  └──────┬───────┘  └───────────────┘  │
-│         │                 │                             │
-│  ┌──────┴───────┐  ┌──────┴──────────────────────────┐  │
-│  │ Recognition  │  │ OutfitRecommendationService     │  │
-│  │ (Vision+LLM) │  │ (Weather + Wardrobe → LLM)      │  │
-│  └──────────────┘  └─────────────────────────────────┘  │
-│  ┌──────────────┐  ┌──────────────┐  ┌───────────────┐  │
-│  │ BgRemoval    │  │ ColorHarmony │  │ Similarity    │  │
-│  │ (4-strategy) │  │ （色彩理论）   │  │ (dHash+HSV)   │  │
-│  └──────────────┘  └──────────────┘  └───────────────┘  │
-├─────────────────────────────────────────────────────────┤
-│                    SwiftData Models                     │
-│  Category · ClothingItem · Outfit · OutfitSlot          │
-│  WearRecord · WearRecordItem                            │
-├─────────────────────────────────────────────────────────┤
-│            iOS Frameworks: Vision · CoreImage           │
-│            Swift Charts · CoreLocation                  │
-└─────────────────────────────────────────────────────────┘
-```
+<div align="center">
+  <img src="docs/architecture.svg" width="720" alt="SmartWardrobe Architecture"/>
+</div>
 
 ### 核心技术亮点
 

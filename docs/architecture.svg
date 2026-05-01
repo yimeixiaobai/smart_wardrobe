@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 670" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="670" fill="white" rx="4"/>
+
+  <!-- ===== UI LAYER ===== -->
+  <rect x="16" y="10" width="768" height="106" rx="12" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="400" y="34" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle" letter-spacing="2">UI LAYER · SWIFTUI</text>
+
+  <g filter="url(#shadow)">
+    <rect x="32" y="46" width="172" height="54" rx="8" fill="white" stroke="#93C5FD"/>
+  </g>
+  <text x="118" y="70" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">TodayView</text>
+  <text x="118" y="87" font-size="10" fill="#64748B" text-anchor="middle">今日推荐</text>
+
+  <g filter="url(#shadow)">
+    <rect x="220" y="46" width="172" height="54" rx="8" fill="white" stroke="#93C5FD"/>
+  </g>
+  <text x="306" y="70" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">WardrobeView</text>
+  <text x="306" y="87" font-size="10" fill="#64748B" text-anchor="middle">我的衣橱</text>
+
+  <g filter="url(#shadow)">
+    <rect x="408" y="46" width="172" height="54" rx="8" fill="white" stroke="#93C5FD"/>
+  </g>
+  <text x="494" y="70" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">OutfitsTab</text>
+  <text x="494" y="87" font-size="10" fill="#64748B" text-anchor="middle">搭配管理</text>
+
+  <g filter="url(#shadow)">
+    <rect x="596" y="46" width="172" height="54" rx="8" fill="white" stroke="#93C5FD"/>
+  </g>
+  <text x="682" y="70" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">ProfileView</text>
+  <text x="682" y="87" font-size="10" fill="#64748B" text-anchor="middle">个人中心</text>
+
+  <!-- Arrow: UI → Services -->
+  <line x1="400" y1="116" x2="400" y2="130" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== SERVICE LAYER ===== -->
+  <rect x="16" y="132" width="768" height="282" rx="12" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="400" y="156" font-size="11" font-weight="bold" fill="#047857" text-anchor="middle" letter-spacing="2">SERVICE LAYER</text>
+
+  <!-- Row 1: Core Services -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="170" width="240" height="56" rx="8" fill="white" stroke="#6EE7B7"/>
+  </g>
+  <text x="148" y="195" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">LLMService</text>
+  <text x="148" y="213" font-size="10" fill="#64748B" text-anchor="middle">Actor · OpenAI-compatible API</text>
+
+  <g filter="url(#shadow)">
+    <rect x="280" y="170" width="240" height="56" rx="8" fill="white" stroke="#6EE7B7"/>
+  </g>
+  <text x="400" y="195" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">WeatherService</text>
+  <text x="400" y="213" font-size="10" fill="#64748B" text-anchor="middle">QWeather API</text>
+
+  <g filter="url(#shadow)">
+    <rect x="532" y="170" width="240" height="56" rx="8" fill="white" stroke="#6EE7B7"/>
+  </g>
+  <text x="652" y="195" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">ImageStorageService</text>
+  <text x="652" y="213" font-size="10" fill="#64748B" text-anchor="middle">File + NSCache 二级缓存</text>
+
+  <!-- Inter-service arrows -->
+  <path d="M 110 226 L 110 240" stroke="#94A3B8" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 200 226 C 300 236, 430 236, 500 240" stroke="#94A3B8" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 430 226 L 530 240" stroke="#94A3B8" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Row 2: Composite AI Services -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="242" width="366" height="56" rx="8" fill="white" stroke="#6EE7B7"/>
+  </g>
+  <text x="211" y="267" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">ClothingRecognitionService</text>
+  <text x="211" y="285" font-size="10" fill="#64748B" text-anchor="middle">Vision + LLM 多模态属性识别</text>
+
+  <g filter="url(#shadow)">
+    <rect x="406" y="242" width="366" height="56" rx="8" fill="white" stroke="#6EE7B7"/>
+  </g>
+  <text x="589" y="267" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">OutfitRecommendationService</text>
+  <text x="589" y="285" font-size="10" fill="#64748B" text-anchor="middle">Weather + Wardrobe → LLM 穿搭推荐</text>
+
+  <!-- Row 3: Processing Services -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="314" width="240" height="56" rx="8" fill="white" stroke="#6EE7B7"/>
+  </g>
+  <text x="148" y="339" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">BackgroundRemoval</text>
+  <text x="148" y="357" font-size="10" fill="#64748B" text-anchor="middle">4-Strategy Cascade 去背景</text>
+
+  <g filter="url(#shadow)">
+    <rect x="280" y="314" width="240" height="56" rx="8" fill="white" stroke="#6EE7B7"/>
+  </g>
+  <text x="400" y="339" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">ColorHarmonyService</text>
+  <text x="400" y="357" font-size="10" fill="#64748B" text-anchor="middle">色彩理论配色评分</text>
+
+  <g filter="url(#shadow)">
+    <rect x="532" y="314" width="240" height="56" rx="8" fill="white" stroke="#6EE7B7"/>
+  </g>
+  <text x="652" y="339" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">SimilarityDetection</text>
+  <text x="652" y="357" font-size="10" fill="#64748B" text-anchor="middle">dHash + HSV 相似检测</text>
+
+  <!-- Arrow: Services → Data -->
+  <line x1="400" y1="414" x2="400" y2="428" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== DATA LAYER ===== -->
+  <rect x="16" y="430" width="768" height="106" rx="12" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="400" y="454" font-size="11" font-weight="bold" fill="#6D28D9" text-anchor="middle" letter-spacing="2">DATA LAYER · SWIFTDATA</text>
+
+  <g filter="url(#shadow)">
+    <rect x="32" y="466" width="172" height="54" rx="8" fill="white" stroke="#C4B5FD"/>
+  </g>
+  <text x="118" y="490" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">Category</text>
+  <text x="118" y="507" font-size="10" fill="#64748B" text-anchor="middle">树形分类体系</text>
+
+  <g filter="url(#shadow)">
+    <rect x="220" y="466" width="172" height="54" rx="8" fill="white" stroke="#C4B5FD"/>
+  </g>
+  <text x="306" y="490" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">ClothingItem</text>
+  <text x="306" y="507" font-size="10" fill="#64748B" text-anchor="middle">核心衣物模型</text>
+
+  <g filter="url(#shadow)">
+    <rect x="408" y="466" width="172" height="54" rx="8" fill="white" stroke="#C4B5FD"/>
+  </g>
+  <text x="494" y="490" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">Outfit</text>
+  <text x="494" y="507" font-size="10" fill="#64748B" text-anchor="middle">OutfitSlot 搭配画布</text>
+
+  <g filter="url(#shadow)">
+    <rect x="596" y="466" width="172" height="54" rx="8" fill="white" stroke="#C4B5FD"/>
+  </g>
+  <text x="682" y="490" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">WearRecord</text>
+  <text x="682" y="507" font-size="10" fill="#64748B" text-anchor="middle">穿搭日记</text>
+
+  <!-- ===== PLATFORM LAYER ===== -->
+  <rect x="16" y="552" width="768" height="102" rx="12" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="400" y="576" font-size="11" font-weight="bold" fill="#B45309" text-anchor="middle" letter-spacing="2">PLATFORM · IOS FRAMEWORKS</text>
+
+  <g filter="url(#shadow)">
+    <rect x="32" y="590" width="172" height="46" rx="8" fill="white" stroke="#FCD34D"/>
+  </g>
+  <text x="118" y="618" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">Vision</text>
+
+  <g filter="url(#shadow)">
+    <rect x="220" y="590" width="172" height="46" rx="8" fill="white" stroke="#FCD34D"/>
+  </g>
+  <text x="306" y="618" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">CoreImage</text>
+
+  <g filter="url(#shadow)">
+    <rect x="408" y="590" width="172" height="46" rx="8" fill="white" stroke="#FCD34D"/>
+  </g>
+  <text x="494" y="618" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">Swift Charts</text>
+
+  <g filter="url(#shadow)">
+    <rect x="596" y="590" width="172" height="46" rx="8" fill="white" stroke="#FCD34D"/>
+  </g>
+  <text x="682" y="618" font-size="13" font-weight="600" fill="#1E293B" text-anchor="middle">CoreLocation</text>
+</svg>
