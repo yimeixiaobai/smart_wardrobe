@@ -2,6 +2,9 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+## XcodeGen 生成的项目文件（运行 xcodegen generate 重新生成）
+*.xcodeproj
+
 ## User settings
 xcuserdata/
 *.xcuserstate
