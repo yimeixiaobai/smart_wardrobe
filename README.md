@@ -124,30 +124,30 @@ SmartWardrobe 没有内置后台服务，也不会内置上传你的衣橱数据
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                      SwiftUI Views                       │
+│                      SwiftUI Views                      │
 │  TodayView · WardrobeView · OutfitsTab · ProfileView    │
 ├─────────────────────────────────────────────────────────┤
-│                       Services                           │
+│                       Services                          │
 │  ┌──────────────┐  ┌──────────────┐  ┌───────────────┐  │
 │  │ LLMService   │  │ WeatherSvc   │  │ ImageStorage  │  │
 │  │ (actor)      │  │ (QWeather)   │  │ (File + Cache)│  │
 │  └──────┬───────┘  └──────┬───────┘  └───────────────┘  │
-│         │                 │                              │
+│         │                 │                             │
 │  ┌──────┴───────┐  ┌──────┴──────────────────────────┐  │
 │  │ Recognition  │  │ OutfitRecommendationService     │  │
-│  │ (Vision+LLM) │  │ (Weather + Wardrobe → LLM)     │  │
-│  └──────────────┘  └────────────────────────────────┘  │
+│  │ (Vision+LLM) │  │ (Weather + Wardrobe → LLM)      │  │
+│  └──────────────┘  └─────────────────────────────────┘  │
 │  ┌──────────────┐  ┌──────────────┐  ┌───────────────┐  │
 │  │ BgRemoval    │  │ ColorHarmony │  │ Similarity    │  │
-│  │ (4-strategy) │  │ (色彩理论)    │  │ (dHash+HSV)  │  │
+│  │ (4-strategy) │  │ （色彩理论）   │  │ (dHash+HSV)   │  │
 │  └──────────────┘  └──────────────┘  └───────────────┘  │
 ├─────────────────────────────────────────────────────────┤
-│                    SwiftData Models                       │
+│                    SwiftData Models                     │
 │  Category · ClothingItem · Outfit · OutfitSlot          │
 │  WearRecord · WearRecordItem                            │
 ├─────────────────────────────────────────────────────────┤
-│            iOS Frameworks: Vision · CoreImage            │
-│            Swift Charts · CoreLocation                   │
+│            iOS Frameworks: Vision · CoreImage           │
+│            Swift Charts · CoreLocation                  │
 └─────────────────────────────────────────────────────────┘
 ```
 
