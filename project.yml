@@ -46,7 +46,7 @@ targets:
       path: SmartWardrobe/Info.plist
       properties:
         NSAppTransportSecurity:
-          NSAllowsArbitraryLoadsInWebContent: true
+          NSAllowsArbitraryLoads: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.smartwardrobe.app
