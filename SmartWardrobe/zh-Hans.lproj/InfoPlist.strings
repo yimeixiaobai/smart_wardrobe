@@ -1,0 +1,5 @@
+CFBundleDisplayName = "智能衣橱";
+CFBundleName = "智能衣橱";
+NSCameraUsageDescription = "需要访问相机来拍摄衣物照片";
+NSPhotoLibraryUsageDescription = "需要访问相册来选择衣物照片";
+NSLocationWhenInUseUsageDescription = "用于获取当前天气信息，提供更精准的穿搭推荐";
